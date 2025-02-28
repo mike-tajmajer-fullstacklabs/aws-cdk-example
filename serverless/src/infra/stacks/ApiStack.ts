@@ -1,4 +1,4 @@
-import { Resource, Stack, StackProps } from 'aws-cdk-lib'
+import { CfnOutput, Resource, Stack, StackProps } from 'aws-cdk-lib'
 import { AuthorizationType, CognitoUserPoolsAuthorizer, Cors, LambdaIntegration, MethodOptions, ResourceOptions, RestApi } from 'aws-cdk-lib/aws-apigateway';
 import { IUserPool } from 'aws-cdk-lib/aws-cognito';
 import { Construct } from 'constructs';
@@ -48,5 +48,9 @@ export class ApiStack extends Stack {
         spacesResource.addMethod('POST', props.spacesLambdaIntegration, optionsWithAuth);
         spacesResource.addMethod('PUT', props.spacesLambdaIntegration, optionsWithAuth);
         spacesResource.addMethod('DELETE', props.spacesLambdaIntegration, optionsWithAuth);
+
+        new CfnOutput(this, "SpacesApiUrl", {
+          value: api.url,
+        });
     }
 }

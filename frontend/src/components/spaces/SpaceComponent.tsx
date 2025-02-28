@@ -1,5 +1,5 @@
-import genericImage from "../../assets/generic-photo.jpg";
-import { SpaceEntry } from "../model/model";
+import genericImage from '../../assets/generic-photo.jpg';
+import { SpaceEntry } from '../model/model';
 import './SpaceComponent.css';
 
 interface SpaceComponentProps extends SpaceEntry {
@@ -9,9 +9,9 @@ interface SpaceComponentProps extends SpaceEntry {
 export default function SpaceComponent(props: SpaceComponentProps) {
   function renderImage() {
     if (props.photoUrl) {
-      return <img src={props.photoUrl}/>;
+      return <img src={props.photoUrl} />;
     } else {
-      return <img src={genericImage}/>;
+      return <img src={genericImage} />;
     }
   }
 

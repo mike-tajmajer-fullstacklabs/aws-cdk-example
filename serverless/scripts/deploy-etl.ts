@@ -12,7 +12,7 @@ const dataSet = {
   awsUserPoolClientId: '',
 };
 
-dataSet.spacesApiEndpoint = deploymnetOutput.ApiStack[Object.keys(deploymnetOutput.ApiStack)[0]];
+dataSet.spacesApiEndpoint = deploymnetOutput.ApiStack.SpacesApiUrl;
 dataSet.awsUserPoolId = deploymnetOutput.AuthStack.SpaceUserPoolId;
 dataSet.awsIdentityPoolId = deploymnetOutput.AuthStack.SpacesIdentityPoolId;
 dataSet.awsUserPoolClientId = deploymnetOutput.AuthStack.SpaceUserPoolClientId;

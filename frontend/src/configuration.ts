@@ -1,7 +1,7 @@
 import { ApiStack, AuthStack, DataStack } from '../../serverless/outputs.json';
 
 const awsRegion = 'eu-east-1';
-const spacesUrl = ApiStack.SpacesApiEndpoint36C4F3B6 + 'spaces'
+const spacesUrl = ApiStack.SpacesApiUrl + 'spaces'
 
 export const configuration = {
   ApiStack,
